@@ -18,7 +18,7 @@ var match = require('match-through')
 var spawn = require('child_process').spawn
 spawn('ls', [ '-lh' ]).stdout.pipe(match(/^total\s+(\S+)/, function (m) {
   console.log(m[1])
-}))
+})).pipe(process.stdout)
 ```
 
 ## Api
