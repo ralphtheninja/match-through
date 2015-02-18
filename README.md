@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.org/ralphtheninja/match-through.svg?branch=master)](https://travis-ci.org/ralphtheninja/match-through)
-
-# match-through
+# match-through [![Build Status](https://travis-ci.org/ralphtheninja/match-through.svg?branch=master)](https://travis-ci.org/ralphtheninja/match-through)
 
 * Pipe data through a stream and get notified when something matches
 * Match once or multiple times
