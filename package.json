@@ -21,12 +21,12 @@
   ],
   "license": "WTFPL",
   "devDependencies": {
-    "core-util-is": "^1.0.1",
     "faucet": "0.0.1",
     "split": "^0.3.3",
     "tape": "^3.5.0"
   },
   "dependencies": {
+    "core-util-is": "^1.0.1",
     "through2": "^0.6.3"
   }
 }
