@@ -10,6 +10,8 @@ function match(opts, iter) {
   var matched = false
 
   return through(function (chunk, enc, callback) {
+    this.push(chunk)
+
     var str = chunk.toString()
     var m = regex.exec(str)
 
@@ -23,7 +25,6 @@ function match(opts, iter) {
       }
     }
 
-    this.push(chunk)
     callback()
   })
 
