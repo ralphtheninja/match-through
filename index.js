@@ -7,13 +7,16 @@ function match(opts, iter) {
   if (!util.isRegExp(regex)) throw new Error('missing regular expression')
   if (typeof iter != 'function') throw new Error('missing callback')
 
+  var buff = ''
   var matched = false
 
   return through(function (chunk, enc, callback) {
     this.push(chunk)
 
     var str = chunk.toString()
-    var m = regex.exec(str)
+    buff += str
+
+    var m = regex.exec(opts.buffer ? buff : str)
 
     if (m) {
       if (true === opts.matchAll) {

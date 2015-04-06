@@ -55,3 +55,31 @@ test('multiple match while parsing output from ls -al', function (t) {
     t.end()
   })
 })
+
+test('single match while parsing bufferred output from ls -al', function (t) {
+  var count = 0
+  var child = spawn('ls', [ '-al' ], { cwd: __dirname })
+  var opts = { regex: /test\.js/, buffer: true }
+  child.stdout.pipe(match(opts, function (m) {
+    t.ok(m, 'something matched')
+    ++count
+  }))
+  child.on('close', function (code) {
+    t.equal(count, 1, 'should match file test.js')
+    t.end()
+  })
+})
+
+test('multiple match while parsing bufferred output from ls -al', function (t) {
+  var count = 0
+  var child = spawn('ls', [ '-al' ], { cwd: __dirname })
+  var opts = { regex: /test\.js/g, buffer: true, matchAll: true }
+  child.stdout.pipe(split()).pipe(match(opts, function (m) {
+    t.ok(m, 'something matched')
+    ++count
+  }))
+  child.on('close', function (code) {
+    t.equal(count, 2, 'should match file test.js and anothertest.json')
+    t.end()
+  })
+})
