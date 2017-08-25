@@ -1,6 +1,6 @@
 {
   "name": "match-through",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "pipe data through a stream and react to single or multiple matches",
   "main": "index.js",
   "homepage": "https://github.com/ralphtheninja/match-through",
