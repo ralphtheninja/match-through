@@ -1,13 +1,13 @@
-var through = require('through2')
-var util = require('core-util-is')
+const through = require('through2')
+const util = require('core-util-is')
 
 function match (opts, iter) {
-  var regex = util.isRegExp(opts) ? opts : opts.regex
+  const regex = util.isRegExp(opts) ? opts : opts.regex
   if (!util.isRegExp(regex)) throw new Error('missing regular expression')
   if (typeof iter !== 'function') throw new Error('missing callback')
 
-  var buff = ''
-  var matched = false
+  let buff = ''
+  let matched = false
 
   return through(function (chunk, enc, callback) {
     this.push(chunk)
