@@ -33,8 +33,8 @@ spawn('ls', [ '-lh' ]).stdout.pipe(match(/^total\s+(\S+)/, function (m) {
 
 Returns a through stream that calls back when a regular expression is matched. Does nothing with the data passing through so it's a pure pass through stream.
 
-* opts *(object|regexp)* Either options object with `regex` and `matchAll` properties or a single regular expression.
-* iter *(function)* Called when there is a match. Will call multiple times if there are several matches and `matchAll` property is `true`. If `opts` is a regular expression the callback will be called at the first match only, if ever.
+* `opts` *(object|regex)* Either options object with `.regex` and `.matchAll` properties or a single regular expression.
+* `iter` *(function)* Called when there is a match. Will call multiple times if there are several matches and `.matchAll` property is `true`. If `opts` is a regular expression the callback will be called at the first match only, if ever.
 
 ## License
 All code, unless stated otherwise, is licensed under the [`WTFPL`](http://www.wtfpl.net/txt/copying/).
