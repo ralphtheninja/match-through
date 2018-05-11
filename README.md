@@ -2,9 +2,10 @@
 
 > Match on patterns in a stream
 
+[![npm](https://img.shields.io/npm/v/match-through.svg)](https://www.npmjs.com/package/match-through)
+![Node version](https://img.shields.io/node/v/match-through.svg)
 [![Build Status](https://travis-ci.org/ralphtheninja/match-through.svg?branch=master)](https://travis-ci.org/ralphtheninja/match-through)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![Greenkeeper badge](https://badges.greenkeeper.io/ralphtheninja/match-through.svg)](https://greenkeeper.io/)
 
 * Pipe data through a stream and get notified when something matches
 * Match once or multiple times

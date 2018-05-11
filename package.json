@@ -25,6 +25,9 @@
     "standard": "^11.0.0",
     "tape": "^4.8.0"
   },
+  "engines": {
+    "node": ">=6.0.0"
+  },
   "dependencies": {
     "core-util-is": "^1.0.1",
     "through2": "^2.0.3"
